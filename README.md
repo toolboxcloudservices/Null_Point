@@ -111,4 +111,6 @@ graph LR
 **Author:** DeAnna Bolling  
 *Building the future of Secure AI adoption.*
 
-&copy; Copyright 2026 DeAnna Bolling. All rights reserved. 
+No part of this software or its source code may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the author.
+
+&copy; 2026 DeAnna Bolling. All rights reserved. 
