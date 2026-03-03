@@ -58,7 +58,7 @@ graph LR
     AST -->|Redact PII| PII_Engine[Redaction Layer]
     PII_Engine -->|Sanitized Stream| UI[React Frontend]
     UI -->|Visual Flags| Dev[Developer]
-
+```
 ---
 
 ## 🛠️ Tech Stack
