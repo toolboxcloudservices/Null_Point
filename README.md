@@ -8,14 +8,6 @@ Unlike standard web interfaces (ChatGPT/Claude) that blindly execute code and st
 
 ---
 
-## 🎥 Demo
-
-[INSERT YOUR 30-SECOND DEMO GIF HERE]
-
-> *Above: NullPoint verifying packages in real-time and blocking an AWS Key leak instantly.*
-
----
-
 ## 🚨 The Problem
 
 1.  **Data Exfiltration:** Employees accidentally paste API keys, customer PII, or internal source code into web-based AI tools, leaking trade secrets to third-party servers.
