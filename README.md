@@ -46,7 +46,7 @@ NullPoint implements a **"Shift Left" Security Architecture** that runs entirely
 
 ## 🏗️ Architecture
 
-NullPoint is built as a **Desktop Electron App** to ensure it controls the local environment.
+NullPoint is built as a **Desktop Electron App** to ensure it maintains a secure, local-first environment for intercepting traffic.
 
 ```mermaid
 graph LR
@@ -59,57 +59,56 @@ graph LR
     PII_Engine -->|Sanitized Stream| UI[React Frontend]
     UI -->|Visual Flags| Dev[Developer]
 
-------------
+---
 
-### 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-    Frontend: React (TypeScript), Tailwind CSS, Framer Motion (Animations).
+* **Frontend:** React (TypeScript), Tailwind CSS, Framer Motion (Animations).
+* **Desktop Container:** Electron (IPC Communication).
+* **Security Backend:** Python (FastAPI), `ast` module, Custom Regex Engine.
+* **AI Integration:** OpenAI API (GPT-4o).
 
-    Desktop Container: Electron (IPC Communication).
-
-    Security Backend: Python (FastAPI), ast module, Custom Regex Engine.
-
-    AI Integration: OpenAI API (GPT-4o).
+---
 
 ### 🚀 Getting Started
-Prerequisites
 
-    Node.js & NPM
+#### Prerequisites
+* Node.js & NPM
+* Python 3.10+
+* OpenAI API Key
 
-    Python 3.10+
+#### Installation
 
-    OpenAI API Key
-
-### Installation
-
-    Clone the Repository
-    Bash
-
+1.  **Clone the Repository**
+    ```bash
     git clone [https://github.com/yourusername/nullpoint-ai.git](https://github.com/yourusername/nullpoint-ai.git)
     cd nullpoint-ai
+    ```
 
-    Setup Backend
-    Bash
-
+2.  **Setup Backend**
+    ```bash
     cd backend
     pip install -r requirements.txt
     python main.py
+    ```
 
-    Setup Frontend (New Terminal)
-    Bash
-
+3.  **Setup Frontend (In a new terminal)**
+    ```bash
     cd frontend
     npm install
     npm run electron:dev
+    ```
 
-### 🔮 Future Roadmap
+---
+## 🔮 Future Roadmap
 
-    [ ] Local LLM Support: Add support for running Llama 3 locally (Air-Gapped Mode).
+- [ ] **Local LLM Support:** Add support for running Llama 3 locally (Air-Gapped Mode).
+- [ ] **Custom Ruleset:** Allow organizations to define custom regex patterns for internal project codes.
+- [ ] **SOC2 Reporting:** Export threat logs as a PDF audit trail.
 
-    [ ] Custom Ruleset: Allow organizations to define custom regex patterns for internal project codes.
+---
 
-    [ ] SOC2 Reporting: Export threat logs as a PDF audit trail.
+**Author:** DeAnna Bolling  
+*Building the future of Secure AI adoption.*
 
-Author: DeAnna Bolling
-
-Building the future of Secure AI adoption.
+&copy; Copyright 2026 DeAnna Bolling. All rights reserved. 
