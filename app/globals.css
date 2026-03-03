@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-nullpoint-border;
+  }
+  
+  body {
+    @apply bg-nullpoint-bg text-nullpoint-text font-terminal antialiased;
+    background-color: #050505;
+  }
+  
+  /* Terminal scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #0A0A0A;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #00FF41;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00CC33;
+  }
+}
+
+@layer utilities {
+  .terminal-text {
+    @apply font-terminal text-nullpoint-primary;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+  }
+  
+  .alert-text {
+    @apply font-terminal text-nullpoint-alert;
+    text-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+  }
+  
+  .scan-line {
+    @apply relative;
+  }
+  
+  .scan-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 255, 65, 0.5), transparent);
+    animation: scan 2s linear infinite;
+  }
+  
+  @keyframes scan {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+}
